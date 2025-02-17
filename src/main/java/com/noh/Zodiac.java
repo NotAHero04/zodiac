@@ -1,11 +1,12 @@
-package com.example;
+package com.noh;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
+public class Zodiac implements ModInitializer {
 	public static final String MOD_ID = "modid";
 
 	// This logger is used to write text to the console and the log file.
@@ -19,6 +20,8 @@ public class ExampleMod implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		if(FabricLoader.getInstance().isModLoaded("fabric")) {
+			LOGGER.info("Patching Sodium because we deserve it");
+		}
 	}
 }

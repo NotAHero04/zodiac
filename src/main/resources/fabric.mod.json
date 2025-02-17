@@ -1,33 +1,22 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "zodiac",
 	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Zodiac",
+	"description": "Remove Sodium's PojavLauncher check because we deserve it",
 	"authors": [
-		"Me!"
+		"NOH"
 	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/zodiac/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
+          "com.noh.Zodiac"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"zodiac.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
